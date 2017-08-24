@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "XYPayHelper.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,35 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     return YES;
+}
+
+#pragma mark - 支付宝/微信回调方法
+// iOS 8 及以下
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    
+    //    BOOL canHandleURL = [Pingpp handleOpenURL:url withCompletion:nil];
+    
+    BOOL canHandleURL = [XYPayHelper handleOpenURL:url withCompletion:nil];
+    
+    return canHandleURL;
+    
+}
+
+// iOS 9 及以上
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary *)options {
+    
+    
+    //    BOOL canHandleURL = [Pingpp handleOpenURL:url withCompletion:nil];
+    BOOL canHandleURL = [XYPayHelper handleOpenURL:url withCompletion:nil];
+    
+    
+    return canHandleURL;
+    
 }
 
 
