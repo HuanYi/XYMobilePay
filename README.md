@@ -23,7 +23,7 @@
 
 
 #### 3、适配iOS 9及以上系统注意事项
-1.iOS 9 以上系统版本如果需要使用支付宝和微信渠道，需要在 Info.plist 里添加如下代码：
+1.使用了支付宝和微信渠道，需要在 Info.plist 里添加如下代码：
 ```
 <key>LSApplicationQueriesSchemes</key>
 <array>
