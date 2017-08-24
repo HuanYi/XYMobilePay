@@ -17,6 +17,7 @@
 ```
 #### 2、设置url Schemes
 1.添加URL Schemes：在 Xcode 中，选择你的工程设置项，选中 "TARGETS" 一栏，在 "Info" 标签栏的 "URL Types" 添加 "URL Schemes"，如果使用微信，务必填入所注册的微信应用程序id(例如：wx2345678)，如果不使用微信，则自定义，允许英文字母和数字，首字母必须是英文字母，建议起名稍复杂一些，尽量避免与其他程序冲突。
+
 2.添加 Other Linker Flags：在 Build Settings 搜索 Other Linker Flags ，添加 -ObjC
 
 
